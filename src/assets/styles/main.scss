@@ -1,0 +1,51 @@
+@tailwind base;
+
+/* Your own custom base styles */
+h3 {
+    @apply text-3xl;
+}
+
+h5 {
+    @apply text-2xl;
+}
+
+@tailwind components;
+
+/* Your own custom component styles */
+.container {
+    @apply mt-6 mx-auto my-8;
+}
+
+/**
+ * Import variables
+ */
+
+@import "variables";
+
+/**
+ * Import npm dependencies
+ * see: https://en.parceljs.org/module_resolution.html
+ * see commented examples below
+ */
+
+// @import "some-node-module";
+// @import "@some-company/some-node-module";
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+
+
+/**
+ * Import layouts
+ * It's a best practice to use a partial for each page
+ */
+
+@import "layouts/home";
+
+/**
+ * Do NOT include anything else in this file!
+ */
+
+ @tailwind utilities;
+
+ /* Your own custom utilities */
